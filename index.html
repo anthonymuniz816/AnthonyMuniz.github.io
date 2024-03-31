@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthony Muniz - Home</title>
+  <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+
+  <header>
+    <h1>Anthony Muniz</h1>
+    <p>B. S Computer Science</p>
+  </header>
+
+  <nav id="sidebar">
+    <ul>
+      <li><a href="#" onclick="showHomePage()">Home</a></li>
+      <li><a href="#professional-bio" onclick="changeTab('Professional Bio')">Resume</a></li>
+      <li><a href="#education-background" onclick="changeTab('Education Background')">Education Background</a></li>
+      <li><a href="#projects" onclick="changeTab('Projects')">Projects</a></li>
+      <li><a href="#contact-info" onclick="changeTab('Contact Info')">Contact Info</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <section id="homepage-content">
+      <h2>Professional Bio</h2>
+        <!-- Insert your image here -->
+        <img id="profile-image" src="tony.jpeg" alt="Profile Picture">
+        <p>
+          As a driven and enthusiastic junior in college, I am passionately pursuing a Bachelor's degree in Computer Science with a minor in Mathematics. My academic journey has equipped me with a strong foundation in both theoretical principles and practical applications, empowering me to thrive in the dynamic field of technology. </p>
+         <p> With a keen interest in programming languages, I have honed my skills in Python, C++, Java, SQL, and HTML. Through coursework and personal projects, I have tackled diverse challenges, from algorithm design to web development, consistently seeking to expand my knowledge and expertise. </p>
+          <p>Throughout my academic journey, I have demonstrated a passion for learning and a strong work ethic, earning recognition for my academic achievements and leadership qualities. As I continue to pursue my degree, I am eager to explore new avenues of growth and make meaningful contributions to the field of computer science.
+        </p>
+    </section>
+
+    
+
+    <section id="professional-bio" style="display: none;">
+        <h2>Resume (PDF)</h2>
+        <p>Download my resume <a href="Anthony-Muniz-Internship-Resume.pdf" target="">here</a>.</p>
+      </section>
+      
+
+    <section id="education-background" style="display: none;">
+      <h2>Education Background</h2>
+      <p>I am pursuing a Bachelor's degree in Computer Science with a minor in Math.</p> 
+    <p>Here are some of the key courses I have taken:</p>
+      <ul>
+        <li>Introduction to Computer Science</li>
+        <li>Data Structures and Algorithms</li>
+        <li>Web Development Fundamentals</li>
+        <li>Database Management Systems</li>
+        <li>User Interface Design</li>
+        <li>Introduction to Artificial Intelligence</li>
+        <li>Introduction to Software Development</li>
+        <li>Discrete Structures</li>
+      </ul>
+    </section>
+
+    <section id="projects" style="display: none;">
+      <h2>Projects</h2>
+      <p>UPDATE THIS</p>
+    </section>
+
+    <section id="contact-info" style="display: none;">
+      <h2>Contact Info</h2>
+      <p>Email address: anthonymuniz816@yahoo.com</p>
+      <p>Phone Number: (816)982-5564</p>
+    </section>
+  </div>
+
+  <script>
+    function changeTab(tabName) {
+      // Set page title
+      document.title = 'Anthony Muniz - ' + tabName;
+
+      // Hide all sections
+      var sections = document.getElementsByTagName('section');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+      }
+      
+      // Show selected section
+      document.getElementById(tabName.toLowerCase().replace(/\s+/g, '-')).style.display = 'block';
+    }
+
+    function showHomePage() {
+      // Set page title
+      document.title = 'Anthony Muniz - Home';
+
+      // Hide all sections
+      var sections = document.getElementsByTagName('section');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+      }
+      
+      // Show homepage content
+      document.getElementById('homepage-content').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
